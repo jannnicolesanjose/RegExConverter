@@ -11,6 +11,7 @@ executing==2.2.0
 Flask==3.1.0
 flask-cors==5.0.1
 frozendict==2.4.6
+git-filter-repo==2.47.0
 gunicorn==23.0.0
 ipykernel==6.29.5
 ipython==9.1.0
