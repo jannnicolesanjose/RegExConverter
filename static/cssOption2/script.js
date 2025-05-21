@@ -12,7 +12,7 @@ const cy = cytoscape({
 
    elements: [
    // States (nodes)
-      { data: { id: 'a', label: '-' }, classes: 'initial', position: { x: 50, y: 310 } },
+      { data: { id: 'a', label: '-' }, classes: 'initial', position: { x: 70, y: 310 } },
 
       { data: { id: 'b', label: ' ' }, position: { x: 200, y: 200 } },
       { data: { id: 'c', label: ' ' }, position: { x: 200, y: 420 } },
@@ -40,12 +40,12 @@ const cy = cytoscape({
       { data: { id: 'r', label: ' ' }, position: { x: 1075, y: 460 } },
 
       { data: { id: 's', label: '+' }, classes: 'final', position: { x: 1200, y: 200 } },
-      { data: { id: 't', label: '+' }, classes: 'final', position: { x: 1200, y: 460 } },
+      { data: { id: 't', label: '+' }, classes: 'final', position: { x: 1200, y: 500 } },
 
-      { data: { id: 'u', label: '+' }, classes: 'final', position: { x: 1325, y: 160 } },
-      { data: { id: 'v', label: '+' }, classes: 'final', position: { x: 1325, y: 240 } },
-      { data: { id: 'w', label: '+' }, classes: 'final', position: { x: 1325, y: 380 } },
-      { data: { id: 'x', label: '+' }, classes: 'final', position: { x: 1325, y: 460 } },
+      { data: { id: 'u', label: '+' }, classes: 'final', position: { x: 1370, y: 160 } },
+      { data: { id: 'v', label: '+' }, classes: 'final', position: { x: 1370, y: 240 } },
+      { data: { id: 'w', label: '+' }, classes: 'final', position: { x: 1370, y: 380 } },
+      { data: { id: 'x', label: '+' }, classes: 'final', position: { x: 1370, y: 460 } },
 
 
    // Transition arrows (Edges)
@@ -139,7 +139,7 @@ const cy = cytoscape({
 
    // w
    { data: { source: 'w', target: 'i', label: '1', dist: 500 } },
-   { data: { source: 'w', target: 'l', label: '0', dist: -275 } },
+   { data: { source: 'w', target: 'l', label: '0', dist: -335 } },
 
    // x
    { data: { source: 'x', target: 'k', label: '1' } },
@@ -260,8 +260,15 @@ const cy = cytoscape({
       style: {
         'curve-style': 'loop',
         'target-arrow-shape': 'triangle',
-        'loop-direction': '-30deg',
+        'loop-direction': '-130deg',
         'loop-sweep': '60deg',
+      }
+    },
+    {
+      selector: 'edge[source = "x"][target = "k"]',
+      style: {
+        'text-margin-x': 180,
+        'text-margin-y': 85
       }
     },
     {
@@ -269,6 +276,12 @@ const cy = cytoscape({
       style: {
         'text-margin-x': 25,
         'text-margin-y': -40
+      }
+    },
+    {
+      selector: 'edge[source = "t"][target = "x"]',
+      style: {
+        'text-margin-x': -25
       }
     },
     {
